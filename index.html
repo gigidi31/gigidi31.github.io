@@ -25,7 +25,21 @@
             100% { transform: translateY(0px); }
         }
     </style>
-</head>
+</head> 
+    <script>
+document.getElementById("websiteRequestForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const description = document.getElementById("websiteDescription").value;
+    
+    fetch('https://hooks.zapier.com/hooks/catch/24123042/u6y71z0/', {
+        method: 'POST',
+        body: JSON.stringify({ description }),
+        headers: { 'Content-Type': 'application/json' }
+    })
+    .then(response => alert("Request sent! We'll generate your site soon."))
+    .catch(error => alert("Error: Try again later."));
+});
+</script>
 <body class="font-sans bg-gray-50">
     <!-- Navigation -->
     <nav class="bg-white shadow-sm">
@@ -568,3 +582,4 @@
     </script>
 </body>
 </html>
+
