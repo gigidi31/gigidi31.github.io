@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Site Builder | Free Website Creation in Minutes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-robot text-blue-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-gray-900">AI Site Builder</span>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center space-x-8">
+                    <a href="#" class="text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium">Features</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium">How It Works</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium">Examples</a>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Get Started</button>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="gradient-bg text-white">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                    Your Free Website in Minutes
+                </h1>
+                <p class="mt-6 max-w-lg mx-auto text-xl">
+                    Powered by the world's most advanced AI technology - no coding required!
+                </p>
+                <div class="mt-10">
+                    <div class="inline-flex rounded-md shadow">
+                        <a href="#builder" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10 hover-scale">
+                            Build My Free Website <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-8 flex items-center justify-center">
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-green-300 mr-2"></i>
+                        <span class="text-sm">100% Free</span>
+                    </div>
+                    <div class="flex items-center ml-4">
+                        <i class="fas fa-check-circle text-green-300 mr-2"></i>
+                        <span class="text-sm">No Credit Card Required</span>
+                    </div>
+                    <div class="flex items-center ml-4">
+                        <i class="fas fa-check-circle text-green-300 mr-2"></i>
+                        <span class="text-sm">AI-Powered</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    How It Works
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Get your perfect website in just 3 simple steps
+                </p>
+            </div>
+            <div class="mt-16">
+                <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="pt-6">
+                        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full">
+                            <div class="-mt-6">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mx-auto">
+                                    <span class="text-xl font-bold">1</span>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 text-center">Describe Your Website</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    Tell our AI what kind of website you need. Be as detailed or as simple as you want. Our AI will ask clarifying questions if needed.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-6">
+                        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full">
+                            <div class="-mt-6">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mx-auto">
+                                    <span class="text-xl font-bold">2</span>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 text-center">AI Builds Your Site</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    Our advanced AI technology analyzes your needs and creates a fully functional, beautiful website in seconds.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-6">
+                        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full">
+                            <div class="-mt-6">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mx-auto">
+                                    <span class="text-xl font-bold">3</span>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 text-center">Publish & Share</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    Your website is ready to go! You can edit it anytime and share it with the world. Hosting is optional but recommended.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Builder Section -->
+    <div id="builder" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                <div class="mb-8 lg:mb-0">
+                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        Build Your Free Website Now
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-500">
+                        Describe what you need and our AI will create it instantly. It's completely free with no hidden costs.
+                    </p>
+                    <div class="mt-8">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 bg-blue-500 rounded-full p-1">
+                                <i class="fas fa-bolt text-white text-xs"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Powered by cutting-edge AI</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 bg-blue-500 rounded-full p-1">
+                                <i class="fas fa-lock text-white text-xs"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">No credit card required</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-blue-500 rounded-full p-1">
+                                <i class="fas fa-infinity text-white text-xs"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Unlimited free websites</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white shadow-xl rounded-lg p-6 hover-scale">
+                    <div class="text-center mb-6">
+                        <h3 class="text-lg font-medium text-gray-900">Describe Your Website</h3>
+                        <p class="mt-1 text-sm text-gray-500">Be as detailed as possible for best results</p>
+                    </div>
+                    <form>
+                        <div>
+                            <label for="website-purpose" class="block text-sm font-medium text-gray-700">What's the purpose of your website?</label>
+                            <select id="website-purpose" name="website-purpose" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md">
+                                <option>Business/Company</option>
+                                <option>Portfolio/Personal</option>
+                                <option>E-commerce/Store</option>
+                                <option>Blog/News</option>
+                                <option>Community/Non-profit</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="mt-4">
+                            <label for="website-description" class="block text-sm font-medium text-gray-700">Describe your website in detail</label>
+                            <div class="mt-1">
+                                <textarea id="website-description" name="website-description" rows="4" class="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="Example: I need a website for my photography business. I want to showcase my portfolio, have a contact form, and display my pricing packages..."></textarea>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300">
+                                Generate My Free Website <i class="fas fa-magic ml-2"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="mt-4 text-center text-xs text-gray-500">
+                        By continuing, you agree to our <a href="#" class="text-blue-600 hover:text-blue-800">Terms</a> and <a href="#" class="text-blue-600 hover:text-blue-800">Privacy Policy</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Why Choose AI Site Builder?
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    The most advanced AI website creation technology available
+                </p>
+            </div>
+            <div class="mt-12">
+                <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="pt-6">
+                        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full">
+                            <div class="-mt-6">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mx-auto">
+                                    <i class="fas fa-brain text-lg"></i>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 text-center">Advanced AI Technology</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    Our proprietary AI understands exactly what you need and creates a perfect website tailored to your requirements.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-6">
+                        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full">
+                            <div class="-mt-6">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mx-auto">
+                                    <i class="fas fa-money-bill-wave text-lg"></i>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 text-center">100% Free Forever</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    Create unlimited websites at no cost. We only make money if you choose to host with our recommended partners.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-6">
+                        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full">
+                            <div class="-mt-6">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mx-auto">
+                                    <i class="fas fa-mobile-alt text-lg"></i>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 text-center">Fully Responsive</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    Every website is automatically optimized for all devices - desktop, tablet, and mobile.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-6">
+                        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full">
+                            <div class="-mt-6">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mx-auto">
+                                    <i class="fas fa-palette text-lg"></i>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 text-center">Beautiful Designs</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    Our AI selects from thousands of professional templates to match your industry and style.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-6">
+                        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full">
+                            <div class="-mt-6">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mx-auto">
+                                    <i class="fas fa-bolt text-lg"></i>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 text-center">Lightning Fast</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    Get your website in minutes, not days. Our AI works at incredible speed without sacrificing quality.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-6">
+                        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8 h-full">
+                            <div class="-mt-6">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mx-auto">
+                                    <i class="fas fa-edit text-lg"></i>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 text-center">Easy Editing</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    Change anything with our simple editor. No technical skills required.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="gradient-bg text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold sm:text-4xl">
+                    What Our Users Say
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl mx-auto">
+                    Thousands of free websites created every day
+                </p>
+            </div>
+            <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="pt-6">
+                    <div class="flow-root bg-white bg-opacity-10 rounded-lg px-6 pb-8 h-full">
+                        <div class="-mt-6">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-white text-blue-600 mx-auto">
+                                <i class="fas fa-user text-lg"></i>
+                            </div>
+                            <p class="mt-8 text-base italic">
+                                "I needed a website for my small business but couldn't afford a designer. AI Site Builder created a perfect website in minutes that looks like I paid thousands for it!"
+                            </p>
+                            <div class="mt-6">
+                                <div class="flex items-center justify-center">
+                                    <div class="flex-shrink-0">
+                                        <i class="fas fa-star text-yellow-300"></i>
+                                        <i class="fas fa-star text-yellow-300"></i>
+                                        <i class="fas fa-star text-yellow-300"></i>
+                                        <i class="fas fa-star text-yellow-300"></i>
+                                        <i class="fas fa-star text-yellow-300"></i>
+                                    </div>
+                                </div>
+                                <div class="mt-3 text-center">
+                                    <p class="text-sm font-medium">Sarah J.</p>
+                                    <p class="text-xs">Small Business Owner</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-6">
+                    <div class="flow-root bg-white bg-opacity-10 rounded-lg px-6 pb-8 h-full">
+                        <div class="-mt-6">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-white text-blue-600 mx-auto">
+                                <i class="fas fa-user text-lg"></i>
+                            </div>
+                            <p class="mt-8 text-base italic">
+                                "As a photographer, my portfolio website is crucial. The AI understood exactly what I needed and created a stunning gallery layout that showcases my work perfectly."
+                            </p>
+                            <div class="mt-6">
+                                <div class="flex items-center justify-center">
+                                    <div class="flex-shrink-0">
+                                        <i class="fas fa-star text-yellow-300"></i>
+                                        <i class="fas fa-star text-yellow-300"></i>
+                                        <i class="fas fa-star text-yellow-300"></i>
+                                        <i class="fas fa-star text-yellow-300"></i>
+                                        <i class="fas fa-star text-yellow-300"></i>
+                                    </div>
+                                </div>
+                                <div class="mt-3 text-center">
+                                    <p class="text-sm font-medium">Michael T.</p>
+                                    <p class="text-xs">Professional Photographer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-6">
+                    <div class="flow-root bg-white bg-opacity-10 rounded-lg px-6 pb-8 h-full">
+                        <div class="-mt-6">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-white text-blue-600 mx-auto">
+                                <i class="fas fa-user text-lg"></i>
+                            </div>
+                            <p class="mt-8 text-base italic">
+                                "I was skeptical at first, but this is truly revolutionary. My blog was up and running in under 5 minutes, with a better design than I could have made myself."
+                            </p>
+                            <div class="mt-6">
+                                <div class="flex items-center justify-center">
+                                    <div class="flex-shrink-0">
+                                        <i class="fas fa-star text-yellow-300"></i>
+                                        <i class="fas fa-star text-yellow-300"></i>
+                                        <i class="fas fa-star text-yellow-300"></i>
+                                        <i class="fas fa-star text-yellow-300"></i>
+                                        <i class="fas fa-star text-yellow-300"></i>
+                                    </div>
+                                </div>
+                                <div class="mt-3 text-center">
+                                    <p class="text-sm font-medium">Emily R.</p>
+                                    <p class="text-xs">Blogger</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-blue-50 rounded-lg shadow-xl overflow-hidden">
+                <div class="px-6 py-12 sm:p-16">
+                    <div class="text-center">
+                        <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                            Ready to Build Your Free Website?
+                        </h2>
+                        <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
+                            Join thousands of satisfied users who created their perfect website in minutes.
+                        </p>
+                        <div class="mt-8">
+                            <a href="#builder" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10 hover-scale">
+                                Start Building Now <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                        <div class="mt-4 text-sm text-gray-500">
+                            No credit card required • 100% free • No hidden costs
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Frequently Asked Questions
+                </h2>
+            </div>
+            <div class="mt-12">
+                <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-12">
+                    <div>
+                        <dt class="text-lg leading-6 font-medium text-gray-900">
+                            Is it really free?
+                        </dt>
+                        <dd class="mt-2 text-base text-gray-500">
+                            Absolutely! Website creation is 100% free with no hidden costs. We only make money if you choose to host your website with our recommended partners, which is completely optional.
+                        </dd>
+                    </div>
+                    <div>
+                        <dt class="text-lg leading-6 font-medium text-gray-900">
+                            How does the AI work?
+                        </dt>
+                        <dd class="mt-2 text-base text-gray-500">
+                            Our advanced AI analyzes your description, asks clarifying questions if needed, and then selects from thousands of design patterns to create a website perfectly tailored to your needs.
+                        </dd>
+                    </div>
+                    <div>
+                        <dt class="text-lg leading-6 font-medium text-gray-900">
+                            Can I edit my website after creation?
+                        </dt>
+                        <dd class="mt-2 text-base text-gray-500">
+                            Yes! You can edit every aspect of your website with our simple drag-and-drop editor. No technical skills required.
+                        </dd>
+                    </div>
+                    <div>
+                        <dt class="text-lg leading-6 font-medium text-gray-900">
+                            Do I need hosting?
+                        </dt>
+                        <dd class="mt-2 text-base text-gray-500">
+                            Your website will be available for free on our subdomain. For a professional look (yourdomain.com) and better performance, we recommend our hosting partners, but this is completely optional.
+                        </dd>
+                    </div>
+                    <div>
+                        <dt class="text-lg leading-6 font-medium text-gray-900">
+                            What types of websites can I create?
+                        </dt>
+                        <dd class="mt-2 text-base text-gray-500">
+                            Our AI can create business websites, portfolios, blogs, e-commerce stores, personal websites, and more. Just describe what you need!
+                        </dd>
+                    </div>
+                    <div>
+                        <dt class="text-lg leading-6 font-medium text-gray-900">
+                            How long does it take?
+                        </dt>
+                        <dd class="mt-2 text-base text-gray-500">
+                            Most websites are created in under 2 minutes after you provide the details. The AI works incredibly fast!
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Product</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Features</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Examples</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">About</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Privacy</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Terms</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Connect</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Twitter</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8">
+                <p class="text-base text-gray-400 text-center">
+                    &copy; 2023 AI Site Builder. All rights reserved. The most advanced AI website creation technology.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const purpose = document.getElementById('website-purpose').value;
+            const description = document.getElementById('website-description').value;
+            
+            if(description.length < 20) {
+                alert('Please provide more details about your website for best results.');
+                return;
+            }
+            
+            // In a real implementation, this would call your AI backend
+            alert('Your website is being generated by our AI! This would redirect to the builder in a real implementation.');
+            
+            // This is where you would redirect to the actual builder or show loading state
+            // window.location.href = "/builder?purpose=" + encodeURIComponent(purpose) + "&description=" + encodeURIComponent(description);
+        });
+    </script>
+</body>
+</html>
