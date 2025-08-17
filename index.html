@@ -464,35 +464,6 @@
         .download-btn:hover {
             background-color: #218838;
         }
-
-        /* API key input */
-        .api-key-container {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-        }
-
-        .api-key-container label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-
-        .api-key-container input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-
-        .api-key-container p {
-            font-size: 14px;
-            color: #6c757d;
-            margin-top: 10px;
-        }
     </style>
 </head>
 <body>
@@ -554,12 +525,6 @@
                     <label for="website-name">Website Name (Optional)</label>
                     <input type="text" id="website-name" placeholder="My Awesome Website">
                 </div>
-            </div>
-
-            <div class="api-key-container">
-                <label for="openai-key">Your OpenAI API Key (required)</label>
-                <input type="password" id="openai-key" placeholder="sk-...">
-                <p>We don't store your API key. It's used only for this session to generate your website. <a href="https://platform.openai.com/api-keys" target="_blank">Get your API key</a>.</p>
             </div>
             
             <button id="generate-btn">Generate My Website</button>
@@ -673,9 +638,6 @@
     </footer>
     
     <script>
-        // This implementation uses OpenAI's API to generate actual websites
-        // You'll need an OpenAI API key to use this
-        
         // DOM elements
         const generateBtn = document.getElementById('generate-btn');
         const downloadBtn = document.getElementById('download-btn');
@@ -683,7 +645,6 @@
         const websiteType = document.getElementById('website-type');
         const colorScheme = document.getElementById('color-scheme');
         const websiteName = document.getElementById('website-name');
-        const openaiKey = document.getElementById('openai-key');
         const loading = document.getElementById('loading');
         const previewPlaceholder = document.getElementById('preview-placeholder');
         const websitePreview = document.getElementById('website-preview');
@@ -716,16 +677,10 @@
             const type = websiteType.value;
             const color = colorScheme.value;
             const name = websiteName.value || 'My Website';
-            const apiKey = openaiKey.value;
             
             // Validate inputs
             if (!description) {
                 showError('Please describe your website');
-                return;
-            }
-            
-            if (!apiKey) {
-                showError('Please enter your OpenAI API key');
                 return;
             }
             
@@ -740,15 +695,33 @@
             hostingOffer.style.display = 'none';
             
             try {
-                // Generate website using OpenAI API
-                const htmlContent = await generateWebsiteWithAI(description, type, color, name, apiKey);
+                // Call our backend API to generate the website
+                const response = await fetch('/api/generate-website', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        description,
+                        type,
+                        colorScheme: color,
+                        name
+                    })
+                });
+                
+                if (!response.ok) {
+                    const error = await response.json();
+                    throw new Error(error.message || 'Failed to generate website');
+                }
+                
+                const { html } = await response.json();
                 
                 // Display the generated website in the iframe
                 websitePreview.style.display = 'block';
-                websitePreview.srcdoc = htmlContent;
+                websitePreview.srcdoc = html;
                 
                 // Store the generated HTML for download
-                websitePreview.dataset.generatedHtml = htmlContent;
+                websitePreview.dataset.generatedHtml = html;
                 
                 // Show download button and hosting offer
                 downloadBtn.style.display = 'inline-block';
@@ -804,80 +777,6 @@
                 // In a real implementation, this would redirect to a checkout page
             });
         });
-        
-        // AI Website Generation Function
-        async function generateWebsiteWithAI(description, type, colorScheme, name, apiKey) {
-            // System prompt to guide the AI
-            const systemPrompt = `You are an expert web developer specializing in creating complete, functional websites based on user requirements. 
-                Generate a complete HTML website with CSS and minimal JavaScript based on the following parameters:
-                - Website description: ${description}
-                - Website type: ${type}
-                - Color scheme: ${colorScheme}
-                - Website name: ${name}
-                
-                Requirements:
-                1. Create a complete, standalone HTML file with all necessary CSS and minimal JavaScript
-                2. Include appropriate meta tags and viewport settings for mobile responsiveness
-                3. Use semantic HTML5 elements
-                4. Include a navigation menu if the site has multiple sections
-                5. Make sure the design is modern and professional
-                6. Ensure the color scheme matches the user's preference
-                7. Include relevant sections based on the website type
-                8. Make sure all interactive elements work (buttons, forms, etc.)
-                9. Include a footer with copyright information
-                
-                Output ONLY the complete HTML code with embedded CSS and JavaScript. Do not include any explanations or markdown formatting.`;
-            
-            // API call to OpenAI
-            const response = await fetch('https://api.openai.com/v1/chat/completions', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${apiKey}`
-                },
-                body: JSON.stringify({
-                    model: 'gpt-4',
-                    messages: [
-                        {
-                            role: 'system',
-                            content: systemPrompt
-                        },
-                        {
-                            role: 'user',
-                            content: `Create a ${type} website with ${colorScheme} color scheme called "${name}" with the following description: ${description}`
-                        }
-                    ],
-                    temperature: 0.7,
-                    max_tokens: 4000
-                })
-            });
-            
-            const data = await response.json();
-            
-            if (!response.ok) {
-                throw new Error(data.error?.message || 'Failed to generate website');
-            }
-            
-            // Extract the generated HTML content
-            const generatedContent = data.choices[0]?.message?.content;
-            
-            if (!generatedContent) {
-                throw new Error('No content generated by AI');
-            }
-            
-            // Clean up the response (sometimes GPT adds markdown code blocks)
-            let htmlContent = generatedContent;
-            
-            // Remove markdown code blocks if present
-            if (htmlContent.startsWith('```html')) {
-                htmlContent = htmlContent.substring(7);
-            }
-            if (htmlContent.endsWith('```')) {
-                htmlContent = htmlContent.substring(0, htmlContent.length - 3);
-            }
-            
-            return htmlContent;
-        }
     </script>
 </body>
 </html>
